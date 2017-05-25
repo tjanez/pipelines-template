@@ -59,7 +59,7 @@ From source
 
 .. code::
 
-   pip install --process-dependency-links https://github.com/genialis/pipelines-template/archive/<git-tree-ish>.tar.gz
+   pip install https://github.com/genialis/pipelines-template/archive/<git-tree-ish>.tar.gz
 
 where ``<git-tree-ish>`` can represent any commit SHA, branch name, tag name,
 etc. in `Pipelines template' GitHub repository`_. For example, to install
@@ -67,6 +67,6 @@ the latest Pipelines from the ``master`` branch, use:
 
 .. code::
 
-   pip install --process-dependency-links https://github.com/genialis/pipelines-template/archive/master.tar.gz
+   pip install https://github.com/genialis/pipelines-template/archive/master.tar.gz
 
 .. _`Pipelines template' GitHub repository`: https://github.com/genialis/pipelines-template

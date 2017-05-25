@@ -1,0 +1,15 @@
+# include meta data
+include README.rst
+# include documentation
+recursive-include docs *.py *.rst *.css
+# include tests and files needed by tests (except large files)
+include tox.ini
+include .pylintrc
+include tests/.env
+recursive-include tests *.py *.yml *.yaml *.rst
+recursive-include pipelines_template/tests *.py
+recursive-include pipelines_template/tests/files *
+prune pipelines_template/tests/files/large
+# include Dockerfiles and files needed to build Docker images
+recursive-include pipelines_template/docker_images Dockerfile README.md
+include pipelines_template/docker_images/example/my-script.sh

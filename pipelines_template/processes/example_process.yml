@@ -1,0 +1,32 @@
+# ===============
+# Example process
+# ===============
+---
+
+- slug: pipelines-example
+  name: Pipelines example
+  requirements:
+    expression-engine: jinja
+  data_name: "Pipelines example"
+  version: 0.0.1
+  type: data:example
+  persistence: CACHED
+  input:
+    - name: src
+      label: File
+      type: basic:file
+  output:
+    - name: output
+      label: Result
+      type: basic:string
+    - name: dst
+      label: File
+      type: basic:file
+  run:
+    runtime: polyglot
+    language: bash
+    program: |
+      echo "{\"output\":\"Hello pipelines\"}"
+
+      mv "{{ src.file_temp }}" "{{ src.file }}"
+      re-save-file dst "{{ src.file }}"

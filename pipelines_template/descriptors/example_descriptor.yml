@@ -1,0 +1,14 @@
+- slug: example-descriptor
+  name: Example descriptor schema
+  version: 0.0.1
+  description: Example descriptor schema
+  schema:
+    - name: genome
+      label: Select organism
+      type: basic:string
+      default: Homo sapiens
+      choices:
+        - label: Human
+          value: Homo sapiens
+        - label: Mouse
+          value: Mus musculus

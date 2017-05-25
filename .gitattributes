@@ -1,0 +1,23 @@
+* text eol=lf
+
+*.sh text
+
+*.png binary
+*.jpg binary
+*.tiff binary
+*.pdf binary
+
+*.gz binary
+*.bz2 binary
+*.zip binary
+
+*.bat eol=crlf
+*.tab eol=crlf
+*.xls binary
+*.xlsx binary
+
+*.bam binary
+
+# Use git's 'union' merge driver for the CHANGELOG to prevent common merge
+# conflicts when rebasing pull requests.
+docs/CHANGELOG.rst merge=union
