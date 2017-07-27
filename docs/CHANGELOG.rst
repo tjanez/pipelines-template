@@ -13,3 +13,7 @@ Unreleased
 Added
 -----
 * Initial template for the Resolwe pipelines
+
+Fixed
+-----
+* Support input sanitization

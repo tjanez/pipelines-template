@@ -28,5 +28,5 @@
     program: |
       echo "{\"output\":\"Hello pipelines\"}"
 
-      mv "{{ src.file_temp }}" "{{ src.file }}"
-      re-save-file dst "{{ src.file }}"
+      mv {{ src.file_temp }} {{ src.file }}
+      re-save-file dst {{ src.file }}
