@@ -32,9 +32,6 @@ throttle(["pipelines_template"]) {
 
                     sh "tox -e extra"
 
-                    sh "echo 'Environment:' && python2.7 --version"
-                    sh "tox -e py27"
-
                     sh "echo 'Environment:' && python3.4 --version"
                     sh "tox -e py34"
                 }
