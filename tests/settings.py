@@ -126,7 +126,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_FILTER_BACKENDS': (
         'resolwe.permissions.filters.ResolwePermissionsFilter',
-        'rest_framework.filters.DjangoFilterBackend',
+        'rest_framework_filters.backends.DjangoFilterBackend',
     ),
 }
 
