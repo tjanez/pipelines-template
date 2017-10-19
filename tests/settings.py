@@ -5,6 +5,7 @@ Django settings for running tests for Resolwe package.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import os
+from distutils.util import strtobool  # pylint: disable=import-error,no-name-in-module
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
@@ -119,6 +120,9 @@ FLOW_DOCKER_MAPPINGS = [
      'dest': '/upload',
      'mode': 'rw,z'},
 ]
+
+# Don't pull Docker images if set via the environment variable.
+FLOW_DOCKER_DONT_PULL = strtobool(os.environ.get('PIPELINES_TEMPLATE_DOCKER_DONT_PULL', '0'))
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
